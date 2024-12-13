@@ -19,14 +19,23 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <main>
-      <%= yield %>
+      <div class="flex flex-col lg:flex-row lg:h-screen">
+        <!-- Left Side: Sign-in Form -->
+        <div class="w-full lg:w-1/2 bg-white flex flex-col justify-center px-6 sm:px-12 py-8">
+          <%= yield %>
+        </div>
+
+        <!-- Right Side: Full Image -->
+        <div class="w-full lg:w-1/2 h-64 lg:h-full bg-blue-300">
+          <div class="h-full bg-cover bg-center hidden"></div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

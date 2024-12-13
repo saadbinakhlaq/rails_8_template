@@ -20,6 +20,8 @@ services:
       dockerfile: development.Dockerfile
     command: ./bin/rails tailwindcss:watch
     tty: true
+    env_file:
+      - .env    
     volumes:
       - .:/usr/src/app
   db:

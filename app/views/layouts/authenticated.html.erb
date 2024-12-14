@@ -23,11 +23,19 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render "shared/navbar" %>
-    <main>
-      <%= yield %>
-    </main>
+    <div class="">
+      <%= render "shared/navbar" %>
+
+      <div class="flex">
+        <%= render "shared/sidebar" %>
+
+        <main class="w-4/6 p-4 flex-grow">
+          <%= render "shared/alert" %>
+          <%= yield %>
+        </main>
+
+        <%= render "shared/right_sidebar" %>
+      </div>
+    </div>
   </body>
 </html>

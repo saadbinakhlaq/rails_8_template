@@ -1,24 +1,6 @@
-# README
+How to start
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+copy the env.example to .env, you can make changes to the db as you wish
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+then
+docker compose run app rails db:setup
